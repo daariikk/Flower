@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: backend
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: solonchev32@gmail.com
+    password: "aawa hwwa ucry aqxr"
+    test-connection: true
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    sender:
+      email: no-reply@example.com
+      text: no-reply
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: daria
+    password: FHpxZhvdv4eY57gQtqPOOV3O95AUcHXt
+    url: jdbc:postgresql://dpg-cou9bji0si5c739ak670-a.frankfurt-postgres.render.com:5432/flower_store
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+  liquibase:
+    change-log: db/changelog/main-changelog.xml
+server:
+  port: 9090
+
+store:
+  app:
+    secret: YUyf6UG3IhhoGIYUt9yIoh2IiojpoOtr
+    expirationMs: 1800000

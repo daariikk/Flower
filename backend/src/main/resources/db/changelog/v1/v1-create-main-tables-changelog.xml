@@ -1,0 +1,22 @@
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="v1-1" author="Daria">
+        <sqlFile path="db/changelog/sql/create-user-table.sql"/>
+    </changeSet>
+
+    <changeSet id="v1-2" author="Daria">
+        <sqlFile path="db/changelog/sql/create-flower-table.sql"/>
+    </changeSet>
+
+    <changeSet id="v1-3" author="Daria">
+        <sqlFile path="db/changelog/sql/create-user-flower-table.sql"/>
+    </changeSet>
+
+    <changeSet id="v1-4" author="Daria">
+        <loadData tableName="flower" relativeToChangelogFile="true" file="../data/init-flower.csv" separator=";"/>
+    </changeSet>
+
+</databaseChangeLog>
